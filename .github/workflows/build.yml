@@ -1,4 +1,4 @@
-name: Build VoidX Client
+ñname: Build VoidX Client
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Instalar Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "9.6"
+          gradle-version: "9.2.0"
 
       - name: Descomprimir proyecto
         run: |
@@ -30,7 +30,7 @@ jobs:
       - name: Encontrar proyecto
         run: |
           echo "Contenido:"
-          find project -maxdepth 4 -type f | sort
+          find project -maxdepth 5 -type f | sort
           echo ""
           echo "Build files:"
           find project -name "build.gradle" -o -name "build.gradle.kts"
